@@ -7,11 +7,11 @@ require "punchfork/version"
 Gem::Specification.new do |s|
   s.name        = "punchfork"
   s.version     = Punchfork::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Punchfork."
-  s.description = "TODO: Description of Punchfork."
+  s.authors     = ["Gabriel Odess-Gillett"]
+  s.email       = ["gabeodess@gmail.com"]
+  s.homepage    = "https://github.com/gabeodess/Punchfork"
+  s.summary     = "A simple Ruby library for searching recipes with punchfork.com"
+  s.description = "A simple Ruby library for searching recipes with punchfork.com"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
