@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Gabriel Odess-Gillett"]
   s.email       = ["gabeodess@gmail.com"]
   s.homepage    = "https://github.com/gabeodess/Punchfork"
-  s.summary     = "A simple Ruby library for searching recipes with punchfork.com"
-  s.description = "A simple Ruby library for searching recipes with punchfork.com"
+  s.summary     = "A simple Ruby library for searching food recipes with punchfork.com"
+  s.description = "A simple Ruby library for searching food recipes with punchfork.com"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
