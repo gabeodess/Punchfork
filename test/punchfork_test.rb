@@ -3,9 +3,9 @@ require 'test_helper'
 class PunchforkTest < ActiveSupport::TestCase
     
   def setup
-    Punchfork.setup do |config|
-      config.api_key = "35d33aa134899fc2"
-    end
+    # Punchfork.setup do |config|
+    #   config.api_key = ENV['PUNCHFORK_API_KEY']
+    # end
   end
   
   test "truth" do
