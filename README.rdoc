@@ -1,3 +1,33 @@
 = Punchfork
 
+A simple Ruby library for searching recipes with punchfork.com
+
+= Install
+add it to your Gemfile:
+
+ gem 'punchfork'
+
+configure your API key in config/initializers/punchfork.rb
+
+ Punchfork.setup do |config|
+   config.api_key = 'your-api-key'
+ end
+
+= Usage
+
+Search for recipes using ingredients:
+  
+ search = Punchfork.search(:garlic, :tomatoes)
+ search['count'] # => 10
+ search['recipes'].length # => 10
+
+Any options you pass to the search method will automatically be appended to the querystring sent to punchfork.com.
+For example:
+  search = Punchfork.search(:tomato, count:50)
+  search['count'] # => 50
+
+Check out the full set of options at http://punchfork.com/api#apidocs
+
+= License
+
 This project rocks and uses MIT-LICENSE.
