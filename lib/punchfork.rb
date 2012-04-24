@@ -4,6 +4,8 @@ module Punchfork
   
   autoload :Configuration, 'punchfork/configuration'
   autoload :Base, 'punchfork/base'
+  autoload :Search, 'punchfork/search'
+  autoload :Recipe, 'punchfork/recipe'
   
   extend Configuration
   extend Base

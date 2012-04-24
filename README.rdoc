@@ -11,6 +11,7 @@ configure your API key in config/initializers/punchfork.rb
 
  Punchfork.setup do |config|
    config.api_key = 'your-api-key'
+   config.protocol = 'https' # defaults to http
  end
 
 = Usage
@@ -18,15 +19,19 @@ configure your API key in config/initializers/punchfork.rb
 Search for recipes using ingredients:
   
  search = Punchfork.search(:garlic, :tomatoes)
- search['count'] # => 10
- search['recipes'].length # => 10
+ search.count # => 10
+ search.recipes.length # => 10
 
 Any options you pass to the search method will automatically be appended to the querystring sent to punchfork.com.
 For example:
   search = Punchfork.search(:tomato, count:50)
-  search['count'] # => 50
+  search.count # => 50
 
 Check out the full set of options at http://punchfork.com/api#apidocs
+
+= Contact
+
+If you have any issues or questions, please open a ticket through github: https://github.com/gabeodess/Punchfork/issues
 
 = License
 
