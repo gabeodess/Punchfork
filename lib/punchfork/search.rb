@@ -13,7 +13,7 @@ module Punchfork
         @attributes[k] = v
       end
       
-      @recipes = @recipes.map{ |recipe_hash| Recipe.new(recipe_hash) }
+      @recipes = @recipes.map{ |recipe_hash| recipe = Recipe.new(recipe_hash) }
     end
     
     attr_reader :attributes
