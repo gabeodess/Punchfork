@@ -1,4 +1,6 @@
 module Punchfork
+  
+  # Wrapper for recipe search results.  Provides dot syntax support.
   class Recipe
     
     def initialize(*args)

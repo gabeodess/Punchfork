@@ -1,5 +1,6 @@
 module Punchfork
   
+  # Wrapper for search results providing dot syntax
   class Search
     
     def initialize(*args)
