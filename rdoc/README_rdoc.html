@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>README - Punchfork</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Punchfork.html">Punchfork</a>
+  
+    <li><a href="./Punchfork/Base.html">Punchfork::Base</a>
+  
+    <li><a href="./Punchfork/Configuration.html">Punchfork::Configuration</a>
+  
+    <li><a href="./Punchfork/Recipe.html">Punchfork::Recipe</a>
+  
+    <li><a href="./Punchfork/Search.html">Punchfork::Search</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<h1 id="label-Punchfork"><a href="Punchfork.html">Punchfork</a></h1>
+
+<p>A simple Ruby library for searching recipes with punchfork.com</p>
+
+<h1 id="label-Install">Install</h1>
+
+<p>add it to your Gemfile:</p>
+
+<pre>gem 'punchfork'</pre>
+
+<p>configure your API key in config/initializers/punchfork.rb</p>
+
+<pre class="ruby"><span class="ruby-constant">Punchfork</span>.<span class="ruby-identifier">setup</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">config</span>.<span class="ruby-identifier">api_key</span> = <span class="ruby-string">'your-api-key'</span>
+  <span class="ruby-identifier">config</span>.<span class="ruby-identifier">protocol</span> = <span class="ruby-string">'https'</span> <span class="ruby-comment"># defaults to http</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<h1 id="label-Usage">Usage</h1>
+
+<p>Search for recipes using ingredients:</p>
+
+<pre class="ruby"><span class="ruby-identifier">search</span> = <span class="ruby-constant">Punchfork</span>.<span class="ruby-identifier">search</span>(:<span class="ruby-identifier">garlic</span>, :<span class="ruby-identifier">tomatoes</span>)
+<span class="ruby-identifier">search</span>.<span class="ruby-identifier">count</span> <span class="ruby-comment"># =&gt; 10</span>
+<span class="ruby-identifier">search</span>.<span class="ruby-identifier">recipes</span>.<span class="ruby-identifier">length</span> <span class="ruby-comment"># =&gt; 10</span>
+</pre>
+
+<p>Any options you pass to the search method will automatically be appended to
+the querystring sent to punchfork.com. For example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">search</span> = <span class="ruby-constant">Punchfork</span>.<span class="ruby-identifier">search</span>(:<span class="ruby-identifier">tomato</span>, <span class="ruby-identifier">count</span>:<span class="ruby-value">50</span>)
+<span class="ruby-identifier">search</span>.<span class="ruby-identifier">count</span> <span class="ruby-comment"># =&gt; 50</span>
+</pre>
+
+<p>Check out the full set of options at <a
+href="http://punchfork.com/api#apidocs">punchfork.com/api#apidocs</a></p>
+
+<h1 id="label-Contact">Contact</h1>
+
+<p>If you have any issues or questions, please open a ticket through github:
+<a
+href="https://github.com/gabeodess/Punchfork/issues">github.com/gabeodess/Punchfork/issues</a></p>
+
+<h1 id="label-License">License</h1>
+
+<p>This project rocks and uses MIT-LICENSE.</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
