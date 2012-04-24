@@ -16,10 +16,10 @@ module Punchfork
     attr_reader :attributes
     
     def secure_thumb
-      return secure_url(thumb)
+      return Recipe.secure_url(thumb)
     end
     
-    def secure_url(url)
+    def self.secure_url(url)
       return url if url.match(/^https/)
       uri = URI.parse(url).tap{ |uri| uri.scheme = 'https'; uri.path = File.join('/', uri.host, uri.path); uri.host = 's3.amazonaws.com' }
       return uri.to_s
