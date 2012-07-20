@@ -29,11 +29,15 @@ For example:
 
 Check out the full set of options at http://punchfork.com/api#apidocs
 
-Due to a lack of support images being served over https, I have implemented a rewrite method to do this for you in the Recipe object:
+Due to a lack of support of images being served over https, I have implemented a rewrite method to do this for you in the Recipe object:
 	recipe = search.recipes.first
 	recipe.thumb # http://img.punchfork.net/f9c6047f7958927a0cff232e0da16853_250x250.jpg
 	recipe.secure_thumb # https://s3.amazonaws.com/img.punchfork.net/f9c6047f7958927a0cff232e0da16853_250x250.jpg
 	recipe.secure_url(recipe.thumb) # https://s3.amazonaws.com/img.punchfork.net/f9c6047f7958927a0cff232e0da16853_250x250.jpg
+	
+= Debugging
+If you are not getting the response back you expect you can run your app in debug mode and check the logs:
+	rails server PUNCHFORK_DEBUG=true
 
 = Contact
 
